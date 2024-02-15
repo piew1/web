@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My App</title>
-  <style>
-    .responsive-iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100vw;
-      height: 100vh;
-      border: none;
-    }
-  </style>
-</head>
-<body>
-  <div> 
-    <iframe id="myframe" class="responsive-iframe" src="https://script.google.com/macros/s/AKfycbyohAwXiQnTHx0lGVFlK5nWifvYk8zoUCt1tbnGA4cAH1NKyvt9RF9yHju7WpklpCRnmQ/exec" allowFullScreen></iframe>
-  </div>
-  <script>
-    const apps = new URL(window.location);
-    const formUrl = apps.searchParams.get('apps');
-    const url = decodeURIComponent(formUrl)
-          document.getElementById('myframe').src = url
-  </script>
-</body>
+  <head>
+    <base target="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            }
+    </style>
+  </head>
+  <body>
+    <iframe src="https://script.google.com/macros/s/AKfycbyohAwXiQnTHx0lGVFlK5nWifvYk8zoUCt1tbnGA4cAH1NKyvt9RF9yHju7WpklpCRnmQ/exec"></iframe>
+  </body>
 </html>
